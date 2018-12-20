@@ -1,6 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
-
-<!-- The manifest file describes the fundamental characteristics of the app and defines each of its components. -->
+<?xml version="1.0" encoding="utf-8"?><!-- The manifest file describes the fundamental characteristics of the app and defines each of its components. -->
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.coledixon.test_app">
 
@@ -17,6 +15,13 @@
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+        </activity>
+        <activity android:name=".DisplayMessageActivity"
+                    android:parentActivityName=".MainActivity"> <!-- associate to parent activity -->
+            <!-- meta-data tag required if support using API level 15 or lower -->
+            <!-- <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".MainActivity"   /> -->
         </activity>
     </application>
 
