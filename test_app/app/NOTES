@@ -24,3 +24,7 @@ The startActivity() method starts an instance of the DisplayMessageActivity spec
 
 Each screen in your app that is not the main entry point (all screens that are not the "home" screen) should provide
 navigation so the user can return to the logical parent screen in the app hierarchy by tapping the Up button in the app bar.
+
+//// XML
+android:hint = placeholder text
+android:text = actual text in a field
