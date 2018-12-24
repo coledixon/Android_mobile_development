@@ -1,7 +1,7 @@
 # Android_mobile_development
 
 
--- learning Android mobile application development (https://developer.android.com/training/basics/firstapp/)
+-- learning Android mobile application development
 
 -- Java / JavaScript / XML
 

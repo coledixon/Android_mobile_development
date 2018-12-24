@@ -1,7 +1,7 @@
 # Android_mobile_development
 
 
--- default test app (basic beginner application)
+-- default test app (https://developer.android.com/training/basics/firstapp/)
 
 -- built using Java / XML
 
