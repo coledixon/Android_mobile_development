@@ -6,7 +6,11 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 
+
 public class MainActivity extends AppCompatActivity {
+
+    // helper methods && math ops
+    ExtActivity ext = new ExtActivity();
 
     // define GUI ref vars
     Button btn1, btn2, btn3, btn4, btn5, btn6, btn7, btn8, btn9, btn0,
@@ -22,10 +26,10 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main); // set the UI layout
 
-        // define global obj vals
+        // set global objs
         instatiateObjectRefs();
 
-        // set btn click events
+        // set onClick events
         defineBtnClickEvents();
 
     }
@@ -56,12 +60,27 @@ public class MainActivity extends AppCompatActivity {
         txtVal = findViewById(R.id.txtVal);
     }
 
+    // define onClick events
     protected void defineBtnClickEvents()
     {
+        // use @Override to
+        // numeric events
+        btn0.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                txtVal.setText(txtVal.getText() + "0");
+            }
+        });
         btn1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 txtVal.setText(txtVal.getText() + "1");
+            }
+        });
+        btn2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                txtVal.setText(txtVal.getText() + "2");
             }
         });
     }
