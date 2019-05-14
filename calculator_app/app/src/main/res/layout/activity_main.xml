@@ -157,7 +157,7 @@
         android:text="0" />
 
     <Button
-        android:id="@+id/btnC"
+        android:id="@+id/btnClear"
         style="?android:attr/buttonStyleSmall"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
