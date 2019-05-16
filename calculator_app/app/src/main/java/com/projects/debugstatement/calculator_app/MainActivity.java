@@ -83,5 +83,54 @@ public class MainActivity extends AppCompatActivity {
                 txtVal.setText(txtVal.getText() + "2");
             }
         });
+        btn3.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                txtVal.setText(txtVal.getText() + "3");
+            }
+        });
+        btn4.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                txtVal.setText(txtVal.getText() + "4");
+            }
+        });
+        btn5.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                txtVal.setText(txtVal.getText() + "5");
+            }
+        });
+        btn6.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                txtVal.setText(txtVal.getText() + "6");
+            }
+        });
+        btn7.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                txtVal.setText(txtVal.getText() + "7");
+            }
+        });
+        btn8.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                txtVal.setText(txtVal.getText() + "8");
+            }
+        });
+        btn9.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                txtVal.setText(txtVal.getText() + "9");
+            }
+        });
+        // func events
+        btnAdd.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+            }
+        });
     }
 }
