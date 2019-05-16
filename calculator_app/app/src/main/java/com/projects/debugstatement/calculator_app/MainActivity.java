@@ -129,7 +129,19 @@ public class MainActivity extends AppCompatActivity {
         btnAdd.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
+                txtVal.setText(txtVal.getText() + "+");
+            }
+        });
+        btnEql.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                ext.parseOperator(txtVal.getText().toString());
+            }
+        });
+        btnClear.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                txtVal.setText("");
             }
         });
     }
