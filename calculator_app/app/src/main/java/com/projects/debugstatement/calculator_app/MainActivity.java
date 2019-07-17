@@ -2,6 +2,8 @@ package com.projects.debugstatement.calculator_app;
 
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import java.util.regex.Pattern;
+import java.util.regex.Matcher;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -27,7 +29,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main); // set the UI layout
 
         // set global objs
-        instatiateObjectRefs();
+        instantiateObjectRefs();
 
         // set onClick events
         defineBtnClickEvents();
@@ -35,7 +37,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     // define global obj vals
-    protected void instatiateObjectRefs()
+    protected void instantiateObjectRefs()
     {
         // assign numeric btn refs
         btn0 = findViewById(R.id.btn0);
@@ -125,11 +127,30 @@ public class MainActivity extends AppCompatActivity {
                 txtVal.setText(txtVal.getText() + "9");
             }
         });
+
         // func events
         btnAdd.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                txtVal.setText(txtVal.getText() + "+");
+                if (!txtVal.getText().toString().contains("+"))
+                {
+                    txtVal.setText(txtVal.getText() + "+");
+                }
+            }
+        });
+        btnSub.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if (!txtVal.getText().toString().contains("-"))
+                {
+                    Pattern regex = Pattern.compile("[+/*]");
+
+                    if (regex.matcher(txtVal.getText().toString()).find())
+                    {
+                        txtVal.setText(regex.matcher(txtVal.getText().toString()).replaceAll("-"));
+                    }
+                    else { txtVal.setText(txtVal.getText() + "-"); }
+                }
             }
         });
         btnEql.setOnClickListener(new View.OnClickListener() {
