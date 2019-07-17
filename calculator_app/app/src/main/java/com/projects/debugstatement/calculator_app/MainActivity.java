@@ -134,7 +134,7 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
                 if (!txtVal.getText().toString().contains("+"))
                 {
-                    Pattern regex = Pattern.compile("[-/x]]");
+                    Pattern regex = Pattern.compile("[-/x]]"); // use regex to eval existing operators
 
                     if(regex.matcher(txtVal.getText().toString()).find())
                     {
@@ -149,7 +149,7 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
                 if (!txtVal.getText().toString().contains("-"))
                 {
-                    Pattern regex = Pattern.compile("[+/x]");
+                    Pattern regex = Pattern.compile("[+/x]"); // use regex to eval existing operators
 
                     if (regex.matcher(txtVal.getText().toString()).find())
                     {
@@ -164,7 +164,7 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
                 if (!txtVal.getText().toString().contains("x"))
                 {
-                    Pattern regex = Pattern.compile("[+/-]");
+                    Pattern regex = Pattern.compile("[+/-]"); // use regex to eval existing operators
 
                     if (regex.matcher(txtVal.getText().toString()).find())
                     {
@@ -179,7 +179,7 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
                 if (!txtVal.getText().toString().contains("/"))
                 {
-                    Pattern regex = Pattern.compile("[+x-]");
+                    Pattern regex = Pattern.compile("[+x-]"); // use regex to eval existing operators
 
                     if (regex.matcher(txtVal.getText().toString()).find())
                     {
