@@ -134,7 +134,13 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
                 if (!txtVal.getText().toString().contains("+"))
                 {
-                    txtVal.setText(txtVal.getText() + "+");
+                    Pattern regex = Pattern.compile("[-/x]]");
+
+                    if(regex.matcher(txtVal.getText().toString()).find())
+                    {
+                        txtVal.setText(regex.matcher(txtVal.getText().toString()).replaceAll("+"));
+                    }
+                    else { txtVal.setText(txtVal.getText() + "+"); }
                 }
             }
         });
@@ -143,13 +149,43 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
                 if (!txtVal.getText().toString().contains("-"))
                 {
-                    Pattern regex = Pattern.compile("[+/*]");
+                    Pattern regex = Pattern.compile("[+/x]");
 
                     if (regex.matcher(txtVal.getText().toString()).find())
                     {
                         txtVal.setText(regex.matcher(txtVal.getText().toString()).replaceAll("-"));
                     }
                     else { txtVal.setText(txtVal.getText() + "-"); }
+                }
+            }
+        });
+        btnMulti.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if (!txtVal.getText().toString().contains("x"))
+                {
+                    Pattern regex = Pattern.compile("[+/-]");
+
+                    if (regex.matcher(txtVal.getText().toString()).find())
+                    {
+                        txtVal.setText(regex.matcher(txtVal.getText().toString()).replaceAll("x"));
+                    }
+                    else { txtVal.setText(txtVal.getText() + "x"); }
+                }
+            }
+        });
+        btnDiv.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if (!txtVal.getText().toString().contains("/"))
+                {
+                    Pattern regex = Pattern.compile("[+x-]");
+
+                    if (regex.matcher(txtVal.getText().toString()).find())
+                    {
+                        txtVal.setText(regex.matcher(txtVal.getText().toString()).replaceAll("/"));
+                    }
+                    else { txtVal.setText(txtVal.getText() + "/"); }
                 }
             }
         });
