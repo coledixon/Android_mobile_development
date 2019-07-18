@@ -129,6 +129,7 @@ public class MainActivity extends AppCompatActivity {
         });
 
         // func events
+            // mathematical operators
         btnAdd.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -189,12 +190,14 @@ public class MainActivity extends AppCompatActivity {
                 }
             }
         });
+            // calculate
         btnEql.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 ext.parseOperator(txtVal.getText().toString());
             }
         });
+            // clear numeric field
         btnClear.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
