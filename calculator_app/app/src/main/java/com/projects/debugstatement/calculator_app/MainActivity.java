@@ -21,7 +21,6 @@ public class MainActivity extends AppCompatActivity {
 
     // define calc vars
     float inputVal1, inputVal2;
-    boolean _add, _sub, _multi, _div;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -142,6 +141,7 @@ public class MainActivity extends AppCompatActivity {
                         txtVal.setText(regex.matcher(txtVal.getText().toString()).replaceAll("+"));
                     }
                     else { txtVal.setText(txtVal.getText() + "+"); }
+                    ext.setOperator("+");
                 }
             }
         });
@@ -157,6 +157,7 @@ public class MainActivity extends AppCompatActivity {
                         txtVal.setText(regex.matcher(txtVal.getText().toString()).replaceAll("-"));
                     }
                     else { txtVal.setText(txtVal.getText() + "-"); }
+                    ext.setOperator("-");
                 }
             }
         });
@@ -172,6 +173,7 @@ public class MainActivity extends AppCompatActivity {
                         txtVal.setText(regex.matcher(txtVal.getText().toString()).replaceAll("x"));
                     }
                     else { txtVal.setText(txtVal.getText() + "x"); }
+                    ext.setOperator("x");
                 }
             }
         });
@@ -187,6 +189,7 @@ public class MainActivity extends AppCompatActivity {
                         txtVal.setText(regex.matcher(txtVal.getText().toString()).replaceAll("/"));
                     }
                     else { txtVal.setText(txtVal.getText() + "/"); }
+                    ext.setOperator("/");
                 }
             }
         });
