@@ -19,6 +19,9 @@ public class MainActivity extends AppCompatActivity {
             btnDec, btnAdd, btnSub, btnMulti, btnDiv, btnEql, btnClear;
     EditText txtVal;
 
+    // define value var(s)
+    Float result;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -123,6 +126,12 @@ public class MainActivity extends AppCompatActivity {
                 txtVal.setText(txtVal.getText() + "9");
             }
         });
+        btnDec.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                txtVal.setText(txtVal.getText() + ".");
+            }
+        });
 
         // func events
             // mathematical operators
@@ -194,7 +203,8 @@ public class MainActivity extends AppCompatActivity {
         btnEql.setOnClickListener(new View.OnClickListener() {
             // @Override
             public void onClick(View v) {
-                ext.parseOperator(txtVal.getText().toString());
+                result = ext.parseOperator(txtVal.getText().toString());
+                txtVal.setText(result.toString());
             }
         });
             // clear numeric field
