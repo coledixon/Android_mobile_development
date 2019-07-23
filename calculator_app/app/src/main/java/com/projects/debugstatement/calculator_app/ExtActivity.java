@@ -1,8 +1,5 @@
 package com.projects.debugstatement.calculator_app;
 
-import java.util.regex.Pattern;
-import java.util.regex.Matcher;
-
 // helper method && operations class
 public class ExtActivity {
 
@@ -48,16 +45,13 @@ public class ExtActivity {
     // parse operands from input string
     public void parseOperands(String oprnd)
     {
-        String op;
         String [] oprnds;
 
         if (_add) {
-            oprnds = oprnd.split("+");
+            oprnds = oprnd.split("\\+");
 
-            for(String o:oprnds) {
-                if(operand1 == 0.0f) { operand1 = Float.parseFloat(o); }
-                else { operand2 = Float.parseFloat(o); }
-            }
+            operand1 = Float.parseFloat(oprnds[0]);
+            operand2 = Float.parseFloat(oprnds[1]);
         }
     }
 

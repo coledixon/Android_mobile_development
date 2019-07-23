@@ -19,9 +19,6 @@ public class MainActivity extends AppCompatActivity {
             btnDec, btnAdd, btnSub, btnMulti, btnDiv, btnEql, btnClear;
     EditText txtVal;
 
-    // define calc vars
-    float inputVal1, inputVal2;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -195,7 +192,7 @@ public class MainActivity extends AppCompatActivity {
         });
             // calculate
         btnEql.setOnClickListener(new View.OnClickListener() {
-            @Override
+            // @Override
             public void onClick(View v) {
                 ext.parseOperator(txtVal.getText().toString());
             }
